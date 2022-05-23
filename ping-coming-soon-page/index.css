@@ -1,0 +1,333 @@
+/* ------------------------ */
+/* Custom properties        */
+/* ------------------------ */
+
+:root {
+    /* colors */
+    --clr-blue: 223 87% 63%;
+    --clr-pale-blue: 223 100% 88%;
+    --clr-light-red: 354 100% 66%;
+    --clr-gray: 0 0% 59%;
+    --clr-dark-blue: 209 33% 12%;
+    --clr-white: 0 0% 100%;
+
+    /* font-weights */
+    --fw-1: 300;
+    --fw-2: 600;
+    --fw-3: 700;
+}
+
+/* ------------ */
+/* Reset        */
+/* ------------ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Set up the body */
+body {
+    background-color: hsl(var(--clr-white));
+    font-family: "Libre Franklin", sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+
+    display: grid;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make forms easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* --------------------- */
+/* Utility classes       */
+/* --------------------- */
+
+/* general*/
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+
+/* ------------ */
+/* Layout       */
+/* ------------ */
+
+
+/* Logo */
+.logo {
+    align-self: end;
+}
+
+
+/* Header */
+#header {
+    --gap: 0;
+    align-self: center;
+}
+
+.heading {
+    color: hsl(var(--clr-gray));
+    font-size: 3rem;
+}
+
+.heading span {
+    color: hsl(var(--clr-dark-blue));
+    font-weight: var(--fw-3);
+}
+
+.sub-heading {
+    font-weight: var(--fw-1);
+    font-size: 1.25rem;
+}
+
+
+/* Email Form */
+.email-form {
+    align-self: start;
+    margin-block: .5rem;
+}
+
+.email-input {
+    border: 1px solid hsl(var(--clr-pale-blue));
+    border-radius: 50px;
+    padding-block: .875rem;
+    min-width: 27.5rem;
+    padding-left: 1.5rem;
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: hsl(var(--clr-pale-blue));
+}
+
+.error-message {
+    color: hsl(var(--clr-light-red));
+    font-size: .875rem;
+    font-style: italic;
+    display: none;
+    text-align: start;
+    margin-left: 1.5rem;
+    margin-top: .25rem;
+}
+
+.notify-button {
+    border: none;
+    border-radius: 50px;
+    background-color: hsl(var(--clr-blue));
+    color: hsl(var(--clr-white));
+    cursor: pointer;
+    font-weight: var(--fw-2);
+    padding: .875rem 4rem;
+    box-shadow: 0px 5px 15px 5px hsl(var(--clr-pale-blue));
+}
+
+.notify-button:hover {
+    background-color: hsl(var(--clr-blue) / .85);
+}
+
+
+/* Illustration */
+.main-illustration {
+    width: clamp(600px, 35%, 800px);
+    align-self: start;
+}
+
+
+/* Footer */
+#footer {
+    --gap: 1.25rem;
+    align-self: start;
+}
+
+.social-links {
+    justify-content: center;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: hsl(var(--clr-blue));
+}
+
+.social-links i {
+    aspect-ratio: 1;
+    border: 1px solid hsl(var(--clr-pale-blue));
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+}
+
+.social-links i:hover,
+.social-links i:focus {
+    border-color: hsl(var(--clr-blue));
+    background-color: hsl(var(--clr-blue));
+    color: white;
+}
+
+.social-links div i {
+    color: hsl(var(--clr-blue));
+}
+
+.copyright {
+    color: hsl(var(--clr-gray));
+    font-size: .875rem;
+}
+
+/* Tablet and Mobile layout */
+
+@media (max-width: 768px) {
+
+    #header {
+        --gap: .75rem;
+    }
+
+    .heading {
+        font-size: 2.25rem;
+    }
+
+    .sub-heading {
+        font-size: 1.25rem;
+    }
+
+    .main-illustration {
+        width: 80%;
+    }
+
+    .email-form {
+        flex-direction: column;
+        width: clamp(80%, 80vw, 90%);
+        --gap: 1rem;
+    }
+
+    .email-input {
+        min-width: clamp(80%, 80vw, 90%);
+    }
+
+    .error-message {
+        color: hsl(var(--clr-light-red));
+        font-size: .875rem;
+        font-style: italic;
+        display: none;
+        text-align: center;
+        margin-left: 0;
+        margin-top: .25rem;
+    }
+
+    .notify-button {
+        width: clamp(80%, 80vw, 90%);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        align-self: end;
+    }
+
+    .logo img {
+        width: 85%;
+    }
+
+    #header {
+        --gap: .75rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .sub-heading {
+        font-size: .875rem;
+        margin-bottom: .75rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .email-input {
+        padding-inline: 1.75rem 0rem;
+        font-size: .875rem;
+        min-width: clamp(80%, 80vw, 90%);
+    }
+
+    .notify-button {
+        font-size: .875rem;
+    }
+
+    .main-illustration {
+        width: 90%;
+    }
+
+}

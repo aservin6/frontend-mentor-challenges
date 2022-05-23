@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="index.css">
+
+  <title>Document</title>
+
+</head>
+
+<body>
+  <main id="main" class="grid-container">
+
+    <!-- Brand Logo -->
+    <div class="logo">
+      <img src="./images/logo.svg" alt="ping logo">
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="grid">
+      <h1 class="heading">We are launching <span>soon!</span></h1>
+      <p class="sub-heading">Subscribe and get notified</p>
+    </header>
+
+    <!-- Email Form -->
+    <div class="email-form flex">
+      <div>
+        <input class="email-input" type="email" name="notify-email" placeholder="Your email address...">
+        <div class="error-message">Please provide a valid email address</div>
+      </div>
+
+      <div>
+        <button class="notify-button" type="submit" formnovalidate="formnovalidate">Notify Me</button>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="main-illustration">
+      <img src="./images/illustration-dashboard.png" alt="ping illustration">
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="grid">
+      <div class="social-links flex">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </main>
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0cfcdc178b.js" crossorigin="anonymous"></script>
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Javascript  -->
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
