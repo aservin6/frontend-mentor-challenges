@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/logo.svg" alt="">
+  </div>
+
+  <!-- Calculator Container -->
+  <div class="calc-container">
+
+    <!-- Form Container -->
+    <div class="calc-form-container">
+      <!-- Form -->
+      <form class="calc-form">
+        <!-- Bill Input -->
+        <div class="bill-text-input-container">
+          <label>Bill</label>
+          <img src="images/icon-dollar.svg" alt="">
+          <input id="bill-text-input" type="text" placeholder="0">
+          
+        </div>
+
+        <div>
+          <!-- Tip Buttons -->
+          <label>Select Tip %</label>
+          <div class="button-container">
+            <input class="tip-button" type="button" value="5%" data-tip="5" data-toggle="off" name="tip">
+            <input class="tip-button" type="button" value="10%" data-tip="10" data-toggle="off" name="tip">
+            <input class="tip-button" type="button" value="15%" data-tip="15" data-toggle="off" name="tip">
+            <input class="tip-button" type="button" value="25%" data-tip="25" data-toggle="off" name="tip">
+            <input class="tip-button" type="button" value="50%" data-tip="50" data-toggle="off" name="tip">
+            <input class="custom-input" type="text" placeholder="Custom" data-tip="custom">
+          </div>
+        </div>
+
+        <!-- People Input -->
+        <div class="people-text-input-container">
+          <label>Number of People</label>
+          <img src="images/icon-person.svg" alt="">
+          <!-- Error Div -->
+          <div class="error hide">Can't be zero</div>
+          <input id="people-text-input" type="text" placeholder="0">
+        </div>
+      </form>
+    </div>
+    <!-- Output Screen -->
+    <div class="output-screen">
+      <div class="dollar-amount-container">
+        <div>Tip Amount <br><span>/ person</span></div>
+        <div class="dollar-amount" id="tip-per-person">$0.00</div>
+      </div>
+      <div class="dollar-amount-container">
+        <div>Total <br><span>/ person</span></div>
+        <div class="dollar-amount" id="total-per-person">$0.00</div>
+      </div>
+      <!-- Reset Button -->
+      <button class="reset-button">RESET</button>
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script src="index.js"></script>
+</body>
+
+</html>
