@@ -92,7 +92,7 @@ const PlanSelect = () => {
           </div>
         </button>
       </div>
-      <div className="flex items-center justify-center gap-6 py-2.5 rounded-md mt-3 md:mt-7">
+      <div className="flex items-center justify-center gap-6 py-2.5 bg-alabaster rounded-md mt-3 md:mt-7 md:py-3.5">
         <span
           className={`text-sm ${
             planDetails.billing === "monthly"

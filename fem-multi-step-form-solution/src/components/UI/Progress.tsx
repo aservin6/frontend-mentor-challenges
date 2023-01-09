@@ -59,7 +59,7 @@ const Progress = ({ step }: ProgressProps) => {
       <div className="uppercase flex items-center gap-3">
         <div
           className={`flex items-center justify-center w-8 h-8 border rounded-full  ${
-            step === 4
+            step >= 4
               ? "text-marine-blue bg-light-blue border-light-blue"
               : "text-alabaster"
           }`}
